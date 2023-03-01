@@ -96,24 +96,10 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../core */ "./src/js/lib/core.js");
-// import $ from "../core";
-
-// $.prototype.dropdown = function() {
-//     for (let i = 0; i < this.length; i++) {
-//         const id = $(this[i]).getAttr('id');
-//         $(this[i]).click(() => {
-//             $(`[data-toggle-id="${id}"]`).fadeToggle(300);
-//         });
-
-//     }
-// };
-
-// $('.dropdown-toggle').dropdown();
-
 
 _core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.dropdown = function () {
   for (let i = 0; i < this.length; i++) {
-    const id = this[i].getAttribute('id');
+    const id = Object(_core__WEBPACK_IMPORTED_MODULE_0__["default"])(this[i]).getAttr('id');
     Object(_core__WEBPACK_IMPORTED_MODULE_0__["default"])(this[i]).click(() => {
       Object(_core__WEBPACK_IMPORTED_MODULE_0__["default"])(`[data-toggle-id="${id}"]`).fadeToggle(300);
     });
